@@ -38,10 +38,19 @@ const projects = [
     {
         id: 5,
         title: "⛅ Weather App",
-        description: "Real-time weather for any city — temperature, humidity, wind speed, and conditions. Now with Durban's current 21°C and overcast clouds!",
+        description: "Real-time weather for any city — temperature, humidity, wind speed, and conditions. Galaxies not included.",
         tech: ["React", "OpenWeather API", "Geolocation"],
         url: "https://vcookie-weather-app.netlify.app",
         image: "weather-preview.png",
+        gradient: "linear-gradient(135deg, #2a3a5a 0%, #1a2a4a 100%)"
+    },
+    {
+        id: 6,
+        title: "🤖 AI Assistant",
+        description: "Interactive RAG chatbot trained on my CV. Ask about my skills, certifications, or experience in real-time.",
+        tech: ["React", "RAG", "LLM", "Prompt Engineering"],
+        url: "https://vcookie-portfolio.netlify.app/#ai-section",
+        image: "ai-preview.png",
         gradient: "linear-gradient(135deg, #2a3a5a 0%, #1a2a4a 100%)"
     }
 ];

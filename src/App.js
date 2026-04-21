@@ -24,12 +24,9 @@ function App() {
             5x Microsoft Azure Certified • React • Node.js • AI Integration • CI/CD
           </p>
           <div className="hero-buttons">
-            <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn-primary">
-              Explore Universe ↓
-            </button>
-            <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              GitHub →
-            </a>
+            <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn-primary">Explore Universe ↓</button>
+            <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub →</a>
+            <a href="https://www.linkedin.com/in/snethemba-shangase-softw-mech-civil0101" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">LinkedIn →</a>
           </div>
         </div>
       </header>
@@ -44,7 +41,7 @@ function App() {
         </div>
       </section>
 
-      <section className="ai-section">
+      <section id="ai-section" className="ai-section">
         <div className="ai-preview">
           <h2>🤖 AI Assistant <span className="badge">Live</span></h2>
           <p>Ask questions about my experience, skills, or resume - powered by RAG + LLM</p>
@@ -53,11 +50,12 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>Built with ⚛️ React • Deployed on Netlify • CI/CD with GitHub</p>
-        <div className="footer-links">
-          <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="mailto:snethemba.nosipho.shangase@gmail.com">Email</a>
-          <a href="#">Resume (PDF)</a>
+  <p>Built with ⚛️ React • Deployed on Netlify • CI/CD with GitHub</p>
+  <div className="footer-links">
+    <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/snethemba-shangase-softw-mech-civil0101" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:snethemba.nosipho.shangase@gmail.com">Email</a>
+          <a href="Shangase_SN_CV (Resume).pdf">Resume (PDF)</a>
         </div>
       </footer>
     </div>
