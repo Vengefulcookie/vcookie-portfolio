@@ -55,7 +55,7 @@ function App() {
     <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a>
     <a href="https://www.linkedin.com/in/snethemba-shangase-softw-mech-civil0101" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href="mailto:snethemba.nosipho.shangase@gmail.com">Email</a>
-          <a href="Shangase_SN_CV (Resume).pdf">Resume (PDF)</a>
+          <a href="Snethemba_Shangase_Resume.pdf">Resume (PDF)</a>
         </div>
       </footer>
     </div>
