@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './ProjectCarousel.css';
 import Badge from './Badge';
+import './ProjectCarousel.css';
 
 function ProjectCarousel({ projects }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayRef = useRef(null);
 
-  
-  useEffect(() => { //auto play
+  useEffect(() => { //autoplay
     if (isAutoPlaying) {
       autoPlayRef.current = setInterval(() => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
@@ -20,7 +19,7 @@ function ProjectCarousel({ projects }) {
   const goToNext = () => {
     setIsAutoPlaying(false);
     setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
-    
+   
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
@@ -43,11 +42,6 @@ function ProjectCarousel({ projects }) {
     return 'hidden';
   };
 
-  const visibleProjects = projects.filter((_, index) => {
-    const position = getProjectPosition(index);
-    return position !== 'hidden';
-  });
-
   return (
     <div className="carousel-container">
       <div className="carousel">
@@ -63,8 +57,10 @@ function ProjectCarousel({ projects }) {
             >
               <div className="project-card-carousel" style={{ background: project.gradient }}>
                 <div className="card-content">
-                  <h3>{project.title}</h3>
-                  <Badge category={project.category} size="small" />
+                  <div className="card-header">
+                    <h3>{project.title}</h3>
+                    <Badge category={project.category} size="small" />
+                  </div>
                   <p>{project.description}</p>
                   <div className="tech-stack">
                     {project.tech.map((tech, techIndex) => (

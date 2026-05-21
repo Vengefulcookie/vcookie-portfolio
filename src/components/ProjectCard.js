@@ -1,22 +1,25 @@
 import React from 'react';
+import Badge from './Badge';
 import './ProjectCard.css';
 
 function ProjectCard({ project }) {
     return (
-     <a href={project.url} target="_blank" rel="noopenter noreferrer" className="project-card-link">
-         <div className="project-card" style={{ background: project.gradient }}>
-            <div className="card-content">
-                <h3>{project.title}</h3>
-                <Badge category={project.category} size="small" />
-                <p>{project.description}</p>
-                <div className="tech-stack">
-                    {project.tech.map((tech, index) => (
-                        <span key={index} className="tech-tag">{tech}</span>
-                    ))}
-                </div>
-                <div className="card-footer">
-                    <span className="live-link">🔗 Live Demo →</span>
-                </div>
+        <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-card-link">
+            <div className="project-card" style={{ background: project.gradient }}>
+                <div className="card-content">
+                    <div className="card-header">
+                        <h3>{project.title}</h3>
+                        <Badge category={project.category} size="small" />
+                    </div>
+                    <p>{project.description}</p>
+                    <div className="tech-stack">
+                        {project.tech.map((tech, index) => (
+                            <span key={index} className="tech-tag">{tech}</span>
+                        ))}
+                    </div>
+                    <div className="card-footer">
+                        <span className="live-link">🔗 Live Demo →</span>
+                    </div>
                 </div>
             </div>
         </a>
