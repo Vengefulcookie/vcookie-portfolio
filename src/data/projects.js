@@ -5,6 +5,7 @@ const projects = [
         description: "Explore any planet— I mean country! Flags, capitals, populations, currencies, and languages. Compare two civilizations side by side.",
         tech: ["React", "REST Countries API", "CSS Animations"],
         url: "https://vcookie-country-dashboard.netlify.app",
+        category: "app",
         image: "country-dashboard-preview.png",
         gradient: "linear-gradient(135deg, #1a2a4a 0%, #0a1a3a 100%)"
     },
@@ -14,6 +15,7 @@ const projects = [
         description: "Generate cosmic dessert recipes or search for your favorites. Perfect for sweet inspiration across the galaxy.",
         tech: ["JavaScript", "REST API", "CSS Animations"],
         url: "https://vcookie-dessert-recipe-generator.netlify.app",
+        category: "notes",
         image: "recipe-preview.png",
         gradient: "linear-gradient(135deg, #1a3a4a 0%, #0a2a3a 100%)"
     },
@@ -23,6 +25,7 @@ const projects = [
         description: "A stellar tracker for my goals and aspirations. Hopefully this year I reach the stars!",
         tech: ["JavaScript", "HTML", "CSS"],
         url: "https://vcookie-new-years-resolutions.netlify.app",
+        category: "app",
         image: "resolutions-preview.png",
         gradient: "linear-gradient(135deg, #2a1a4a 0%, #1a0a3a 100%)"
     },
@@ -32,6 +35,7 @@ const projects = [
         description: "Track time across multiple space stations — New York, Tokyo, Johannesburg, Paris, and beyond.",
         tech: ["JavaScript", "Moment.js", "Timezone API"],
         url: "https://vcookie-world-clock-project.netlify.app",
+        category: "app",
         image: "worldclock-preview.png",
         gradient: "linear-gradient(135deg, #1a3a3a 0%, #0a2a2a 100%)"
     },
@@ -41,6 +45,7 @@ const projects = [
         description: "Real-time weather for any city — temperature, humidity, wind speed, and conditions. Galaxies not included.",
         tech: ["React", "OpenWeather API", "Geolocation"],
         url: "https://vcookie-weather-app.netlify.app",
+        category: "app",
         image: "weather-preview.png",
         gradient: "linear-gradient(135deg, #2a3a5a 0%, #1a2a4a 100%)"
     },
@@ -50,8 +55,19 @@ const projects = [
         description: "Interactive RAG chatbot trained on my CV. Ask about my skills, certifications, or experience in real-time.",
         tech: ["React", "RAG", "LLM", "Prompt Engineering"],
         url: "https://vcookie-portfolio.netlify.app/#ai-section",
+        category: "ai",
         image: "ai-preview.png",
         gradient: "linear-gradient(135deg, #2a3a5a 0%, #1a2a4a 100%)"
+    },
+    {
+        id: 7,
+        title: "🏎️ Retro Racer",
+        description: "A nostalgic, fast-paced arcade racing game. Dodge traffic, increase your speed, and set a high score in this retro-style driving challenge.",
+        tech: ["JavaScript", "HTML5 Canvas", "Game Logic", "CSS Animations"],
+        url: "https://vcookie-retro-racer.netlify.app",
+        category: "game",
+        image: "retro-racer-preview.png",
+        gradient: "linear-gradient(135deg, #2a3a3a 0%, #1a2a2a 100%)"
     }
 ];
 

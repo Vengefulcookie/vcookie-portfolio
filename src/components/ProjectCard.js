@@ -7,6 +7,7 @@ function ProjectCard({ project }) {
          <div className="project-card" style={{ background: project.gradient }}>
             <div className="card-content">
                 <h3>{project.title}</h3>
+                <Badge category={project.category} size="small" />
                 <p>{project.description}</p>
                 <div className="tech-stack">
                     {project.tech.map((tech, index) => (

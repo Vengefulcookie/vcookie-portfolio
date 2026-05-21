@@ -95,3 +95,17 @@
   color: #c8ddf0;
   letter-spacing: 0.5px;
 }
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.card-header h3 {
+    margin-bottom: 0; 
+    flex: 1;
+}

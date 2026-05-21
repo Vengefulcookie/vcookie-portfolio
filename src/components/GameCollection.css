@@ -1,0 +1,221 @@
+.game-collection {
+    margin: 60px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(10, 20, 50, 0.6), rgba(5, 10, 30, 0.8));
+    border-radius: 40px;
+    border: 1px solid rgba(74, 111, 165, 0.3);
+}
+
+.game-collection-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.header-content h2 {
+    font-size: 2.5rem;
+    color: #c8ddf0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.game-emoji {
+    font-size: 2rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.game-count {
+    background: rgba(255, 107, 107, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 107, 107, 0.5);
+}
+
+.header-content p {
+    color: #8aaec0;
+    font-size: 1.1rem;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(10, 20, 50, 0.6);
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(74, 111, 165, 0.3);
+}
+
+.stat-icon {
+    font-size: 1.2rem;
+}
+
+.stat-text {
+    color: #7ab3c8;
+    font-size: 0.9rem;
+}
+
+.game-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.game-archive-btn {
+    background: linear-gradient(135deg, rgba(74, 111, 165, 0.3), rgba(74, 111, 165, 0.1));
+    border: 1px solid rgba(74, 111, 165, 0.5);
+    color: #7ab3c8;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.game-archive-btn:hover {
+    background: linear-gradient(135deg, rgba(74, 111, 165, 0.5), rgba(74, 111, 165, 0.3));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 111, 165, 0.3);
+}
+
+.game-note {
+    color: #8aaec0;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.game-archive {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(5, 10, 30, 0.6);
+    border-radius: 20px;
+    animation: slideDown 0.5s ease;
+}
+
+.game-archive h3 {
+    color: #c8ddf0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.game-list-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(10, 20, 50, 0.8);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(74, 111, 165, 0.2);
+}
+
+.game-list-item:hover {
+    transform: translateX(10px);
+    background: rgba(20, 30, 60, 0.9);
+    border-color: rgba(74, 111, 165, 0.5);
+}
+
+.game-icon {
+    font-size: 2rem;
+}
+
+.game-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.game-info strong {
+    color: #c8ddf0;
+    font-size: 1.1rem;
+}
+
+.game-desc {
+    color: #8aaec0;
+    font-size: 0.85rem;
+}
+
+.play-now {
+    color: #7ab3c8;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.game-list-item:hover .play-now {
+    color: #c8ddf0;
+    transform: translateX(5px);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .game-collection {
+        padding: 15px;
+    }
+    
+    .header-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .game-stats {
+        gap: 15px;
+    }
+    
+    .stat {
+        padding: 5px 12px;
+    }
+    
+    .stat-text {
+        font-size: 0.8rem;
+    }
+    
+    .game-list-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .game-icon {
+        font-size: 1.5rem;
+    }
+}

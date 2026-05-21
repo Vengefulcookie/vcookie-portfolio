@@ -1,10 +1,17 @@
 import React from 'react';
 import './App.css';
 import projects from './data/projects';
-import ProjectCard from './components/ProjectCard';
+import ProjectCarousel from './components/ProjectCarousel';
+import GameCollection from './components/GameCollection';
 import Chatbot from './components/Chatbot';
 
 function App() {
+  const apps = projects.filter(p => p.category === 'app');
+  const aiProjects = projects.filter(p => p.category === 'ai');
+  const notesProjects = projects.filter(p => p.category === 'notes');
+  const toolsProjects = projects.filter(p => p.category === 'tool');
+  const allApps = [...apps, ...aiProjects, ...toolsProjects, ...notesProjects];
+
   return (
     <div className="portfolio-container">
       <header className="hero">
@@ -31,14 +38,12 @@ function App() {
         </div>
       </header>
 
+      <GameCollection projects={projects} />
+
       <section id="projects" className="projects-section">
-        <h2 className="section-title">🚀 My Projects</h2>
-        <p className="section-subtitle">Live apps I've built - each solving a real problem</p>
-        <div className="projects-grid">
-          {projects.map(project => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        <h2 className="section-title">🚀 Web Applications</h2>
+        <p className="section-subtitle">Tools and apps I've built to solve real problems</p>
+        <ProjectCarousel projects={allApps} />
       </section>
 
       <section id="ai-section" className="ai-section">
@@ -50,11 +55,11 @@ function App() {
       </section>
 
       <footer className="footer">
-  <p>Built with ⚛️ React • Deployed on Netlify • CI/CD with GitHub</p>
-  <div className="footer-links">
-    <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/snethemba-shangase-softw-mech-civil0101" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="mailto:snethemba.nosipho.shangase@gmail.com">Email</a>
+        <p>Built with ⚛️ React • Deployed on Netlify • CI/CD with GitHub</p>
+        <div className="footer-links">
+          <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/snethemba-shangase-softw-mech-civil0101" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:snethemba.nosipho.shangase@gmail.com">Email</a>
           <a href="Snethemba_Shangase_Resume.pdf">Resume (PDF)</a>
         </div>
       </footer>
