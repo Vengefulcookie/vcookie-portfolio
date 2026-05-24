@@ -27,9 +27,9 @@ function App() {
         <div className="hero-content">
           <div className="hero-emoji">🌌</div>
           <h1>Snethemba Shangase</h1>
-          <h2>Cloud & DevOps Engineer | Full-Stack Developer</h2>
+          <h2>Software Developer | Azure Certified</h2>
           <p className="hero-description">
-            5x Microsoft Azure Certified • React • Node.js • AI Integration • CI/CD
+           React • Node.js • AI Integration • CI/CD
           </p>
           <div className="hero-buttons">
             <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn-primary">Explore Universe ↓</button>
