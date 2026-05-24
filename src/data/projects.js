@@ -68,7 +68,7 @@ const projects = [
         description: "A dark fantasy risk game. Flip a cursed coin, gamble your soul, and try to survive 15 flips. Heads grant life, Tails take it away.",
         tech: ["JavaScript", "HTML5", "CSS Animations", "Game Logic"],
         url: "https://vcookie-the-sunken-coin.netlify.app",
-        category: "gamelab",
+        category: "gameLab",
         gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)"
     }
 ];
