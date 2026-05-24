@@ -4,73 +4,88 @@ import './GameCollection.css';
 
 function GameCollection({ projects }) {
     const [showAllGames, setShowAllGames] = useState(false);
-    const retroGames = projects.filter(project => 
-        project.category === 'retro' || project.gameType === 'arcade'
+  
+    const allGames = projects.filter(project => 
+        project.category === 'retro' || project.category === 'gameLab'
     );
     
-    if (retroGames.length === 0) return null;
+    if (allGames.length === 0) return null;
+ 
+    const getGameBadge = (category, title) => {
+        if (category === 'retro') {
+            return { icon: "🎮", label: "Retro Arcade", class: "badge-retro" };
+        }
+        if (title.includes('Sunken')) {
+            return { icon: "⚔️", label: "Dark Fantasy", class: "badge-fantasy" };
+        }
+        return { icon: "🧪", label: "Game Lab", class: "badge-lab" };
+    };
     
     return (
         <div className="game-collection">
             <div className="game-collection-header">
                 <div className="header-content">
                     <h2>
-                        <span className="game-emoji">🎮</span> 
-                        Retro Arcade
-                        <span className="game-count">{retroGames.length} games</span>
+                        <span className="game-emoji">🧪</span> 
+                        Game Lab
+                        <span className="game-count">{allGames.length} games</span>
                     </h2>
-                    <p>Pixel-perfect nostalgia! Classic arcade action with a modern twist.</p>
+                    <p>Experimenting with game design - from retro arcade to dark fantasy!</p>
                 </div>
                 <div className="game-stats">
                     <div className="stat">
-                        <span className="stat-icon">🎯</span>
-                        <span className="stat-text">High Scores</span>
+                        <span className="stat-icon">🎮</span>
+                        <span className="stat-text">Retro Arcade</span>
                     </div>
                     <div className="stat">
-                        <span className="stat-icon">⚡</span>
-                        <span className="stat-text">Fast-paced</span>
+                        <span className="stat-icon">⚔️</span>
+                        <span className="stat-text">Dark Fantasy</span>
                     </div>
                     <div className="stat">
-                        <span className="stat-icon">🕹️</span>
-                        <span className="stat-text">Retro Vibes</span>
+                        <span className="stat-icon">🧪</span>
+                        <span className="stat-text">Experimental</span>
                     </div>
                 </div>
             </div>
             
-            <ProjectCarousel projects={retroGames} />
+            <ProjectCarousel projects={allGames} />
             
             <div className="game-footer">
                 <button 
                     className="game-archive-btn"
                     onClick={() => setShowAllGames(!showAllGames)}
                 >
-                    {showAllGames ? '📖 Show Less' : '🎮 View All Retro Games'}
+                    {showAllGames ? '📖 Show Less' : '🎮 View All Games'}
                 </button>
                 <p className="game-note">
-                    ⭐ More retro classics coming soon: Space Invaders, Snake, and Pac-Man style games!
+                    ⭐ More games coming soon! Each one is a new experiment in fun.
                 </p>
             </div>
             
             {showAllGames && (
                 <div className="game-archive">
-                    <h3>Retro Collection</h3>
+                    <h3>Game Collection</h3>
                     <div className="game-list">
-                        {retroGames.map(game => (
-                            <a 
-                                key={game.id} 
-                                href={game.url} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="game-list-item"
-                            >
-                                <span className="game-icon">🎮</span>
-                                <div className="game-info">
-                                    <strong>{game.title}</strong>
-                                    <span className="game-desc">{game.description.substring(0, 60)}...</span>
-                                </div>
-                                <span className="play-now">Play Now →</span>
-                            </a>
-                        ))}
+                        {allGames.map(game => {
+                            const badge = getGameBadge(game.category, game.title);
+                            return (
+                                <a 
+                                    key={game.id} 
+                                    href={game.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="game-list-item"
+                                >
+                                    <span className="game-icon">{badge.icon}</span>
+                                    <div className="game-info">
+                                        <strong>{game.title}</strong>
+                                        <span className={`game-type-badge ${badge.class}`}>{badge.label}</span>
+                                        <span className="game-desc">{game.description.substring(0, 60)}...</span>
+                                    </div>
+                                    <span className="play-now">Play Now →</span>
+                                </a>
+                            );
+                        })}
                     </div>
                 </div>
             )}

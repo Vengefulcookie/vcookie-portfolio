@@ -3,10 +3,10 @@ import './App.css';
 import projects from './data/projects';
 import ProjectCarousel from './components/ProjectCarousel';
 import GameCollection from './components/GameCollection';
-import GameLab from './components/GameLab';
 import Chatbot from './components/Chatbot';
 
 function App() {
+  // Separate projects by category
   const apps = projects.filter(p => p.category === 'app');
   const aiProjects = projects.filter(p => p.category === 'ai');
   const notesProjects = projects.filter(p => p.category === 'notes');
@@ -29,7 +29,7 @@ function App() {
           <h1>Snethemba Shangase</h1>
           <h2>Software Developer | Azure Certified</h2>
           <p className="hero-description">
-           React • Node.js • AI Integration • CI/CD
+            React • Node.js • AI Integration • CI/CD
           </p>
           <div className="hero-buttons">
             <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn-primary">Explore Universe ↓</button>
@@ -39,15 +39,20 @@ function App() {
         </div>
       </header>
 
+      <div className="ci-badge-container">
+        <div className="ci-badge">
+          ⚡ CI/CD: GitHub + Netlify auto-deploy
+        </div>
+      </div>
+
       <GameCollection projects={projects} />
-      
-      <GameLab projects={projects} />
 
       <section id="projects" className="projects-section">
         <h2 className="section-title">🚀 Web Applications</h2>
         <p className="section-subtitle">Tools and apps I've built to solve real problems</p>
         <ProjectCarousel projects={allApps} />
       </section>
+
 
       <section id="ai-section" className="ai-section">
         <div className="ai-preview">
@@ -58,13 +63,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>Built with ⚛️ React • Deployed on Netlify • CI/CD with GitHub</p>
-        <div className="footer-links">
-          <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/snethemba-shangase-softw-mech-civil0101" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:snethemba.nosipho.shangase@gmail.com">Email</a>
-          <a href="Snethemba_Shangase_Resume.pdf">Resume (PDF)</a>
-        </div>
+        <p>© 2026 Snethemba Shangase | <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a> | Built with ☕ and determination</p>
       </footer>
     </div>
   );
