@@ -3,6 +3,7 @@ import './App.css';
 import projects from './data/projects';
 import ProjectCarousel from './components/ProjectCarousel';
 import GameCollection from './components/GameCollection';
+import GameLab from './components/GameLab';
 import Chatbot from './components/Chatbot';
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
       </header>
 
       <GameCollection projects={projects} />
+      
+      <GameLab projects={projects} />
 
       <section id="projects" className="projects-section">
         <h2 className="section-title">🚀 Web Applications</h2>

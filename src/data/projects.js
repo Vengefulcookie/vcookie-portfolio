@@ -65,9 +65,18 @@ const projects = [
         description: "A nostalgic, fast-paced arcade racing game. Dodge traffic, increase your speed, and set a high score in this retro-style driving challenge.",
         tech: ["JavaScript", "HTML5 Canvas", "Game Logic", "CSS Animations"],
         url: "https://vcookie-retro-racer.netlify.app",
-        category: "game",
+        category: "retro",
         image: "retro-racer-preview.png",
         gradient: "linear-gradient(135deg, #2a3a3a 0%, #1a2a2a 100%)"
+    },
+     {
+        id: 8,
+        title: "⚔️ The Sunken Coin",
+        description: "A dark fantasy risk game. Flip a cursed coin, gamble your soul, and try to survive 15 flips.",
+        tech: ["JavaScript", "HTML5", "CSS Animations", "Game Logic"],
+        url: "https://vcookie-the-sunken-coin.netlify.app",
+        category: "gameLab", // 👈 Game Lab section
+        gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)"
     }
 ];
 
