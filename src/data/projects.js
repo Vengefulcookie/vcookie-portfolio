@@ -88,6 +88,15 @@ const projects = [
     url: "https://vcookie-ember-run.netlify.app",
     category: "gameLab",
     gradient: "linear-gradient(135deg, #2a1a3a 0%, #1a0a2a 50%, #0a0a1a 100%)"
+},
+{
+    id: 11,
+    title: "💥 Breakout",
+    description: "Classic arcade block-breaking action! Bounce the ball, destroy all the bricks, and don't let it fall. How high can you score?",
+    tech: ["JavaScript", "HTML5 Canvas", "Collision Detection", "Game Physics"],
+    url: "https://vcookie-breakout.netlify.app",
+    category: "retro",
+    gradient: "linear-gradient(135deg, #2a2a4a 0%, #1a1a3a 50%, #0a0a2a 100%)"
 }
 ];
 
