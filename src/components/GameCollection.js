@@ -11,8 +11,10 @@ function GameCollection({ projects }) {
     
     if (allGames.length === 0) return null;
 
-    const getGameBadge = (category, title) => {
-
+   const getGameBadge = (category, title) => {
+    if (title.includes('Ember')) {
+        return { icon: "✨", label: "Atmospheric Runner", class: "badge-ember" };
+    }
     if (title.includes('Claw')) {
         return { icon: "🦀", label: "Arcade Sim", class: "badge-claw" };
     }

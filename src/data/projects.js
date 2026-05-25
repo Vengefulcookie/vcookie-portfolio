@@ -79,6 +79,15 @@ const projects = [
     url: "https://vcookie-claw-machine.netlify.app",
     category: "gameLab",
     gradient: "linear-gradient(135deg, #2a4a5a 0%, #1a3a4a 50%, #0a2a3a 100%)" 
+},
+{
+    id: 10,
+    title: "✨ Ember Run",
+    description: "A atmospheric collection game. Run through the dark, collect lanterns while keeping your lives. How far can you go?",
+    tech: ["JavaScript", "HTML5 Canvas", "Game Loop", "Collision Detection"],
+    url: "https://vcookie-ember-run.netlify.app",
+    category: "gameLab",
+    gradient: "linear-gradient(135deg, #2a1a3a 0%, #1a0a2a 50%, #0a0a1a 100%)"
 }
 ];
 
