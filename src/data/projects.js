@@ -70,7 +70,16 @@ const projects = [
         url: "https://vcookie-the-sunken-coin.netlify.app",
         category: "gameLab",
         gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)"
-    }
+    },
+    {
+    id: 9,
+    title: "🦀 Claw Machine",
+    description: "Test your skill! Move the claw, grab prizes, and collect unique stickers. Costs 1 credit per play. Can you win them all?",
+    tech: ["JavaScript", "Canvas API", "Collision Detection", "Game Logic"],
+    url: "https://vcookie-claw-machine.netlify.app",
+    category: "gameLab",
+    gradient: "linear-gradient(135deg, #2a4a5a 0%, #1a3a4a 50%, #0a2a3a 100%)" 
+}
 ];
 
 export default projects;

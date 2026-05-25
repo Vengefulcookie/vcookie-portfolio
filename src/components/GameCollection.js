@@ -10,17 +10,21 @@ function GameCollection({ projects }) {
     );
     
     if (allGames.length === 0) return null;
- 
+
     const getGameBadge = (category, title) => {
-        if (category === 'retro') {
-            return { icon: "🎮", label: "Retro Arcade", class: "badge-retro" };
-        }
-        if (title.includes('Sunken')) {
-            return { icon: "⚔️", label: "Dark Fantasy", class: "badge-fantasy" };
-        }
-        return { icon: "🧪", label: "Game Lab", class: "badge-lab" };
-    };
-    
+
+    if (title.includes('Claw')) {
+        return { icon: "🦀", label: "Arcade Sim", class: "badge-claw" };
+    }
+    if (category === 'retro') {
+        return { icon: "🎮", label: "Retro Arcade", class: "badge-retro" };
+    }
+    if (title.includes('Sunken')) {
+        return { icon: "⚔️", label: "Dark Fantasy", class: "badge-fantasy" };
+    }
+    return { icon: "🧪", label: "Game Lab", class: "badge-lab" };
+};
+
     return (
         <div className="game-collection">
             <div className="game-collection-header">

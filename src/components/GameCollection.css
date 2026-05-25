@@ -263,3 +263,9 @@
     color: #c39bd3;
     border: 1px solid rgba(155, 89, 182, 0.5);
 }
+
+.badge-claw {
+    background: rgba(64, 224, 208, 0.3);
+    color: #40e0d0;
+    border: 1px solid rgba(64, 224, 208, 0.5);
+}
