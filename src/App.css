@@ -421,3 +421,17 @@ body {
     transform: scale(1.02);
     background: linear-gradient(135deg, rgba(74, 111, 165, 0.3), rgba(74, 111, 165, 0.15));
 }
+
+.cert-badge {
+    margin-bottom: 15px;
+}
+
+.azure-badge {
+    background: linear-gradient(135deg, #0078d4, #005a9e);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    display: inline-block;
+}

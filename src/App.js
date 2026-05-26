@@ -27,10 +27,13 @@ function App() {
         <div className="hero-content">
           <div className="hero-emoji">🌌</div>
           <h1>Snethemba Shangase</h1>
-          <h2>Software Developer | Azure Certified</h2>
-          <p className="hero-description">
-            React • Node.js • AI Integration • CI/CD
-          </p>
+          <h2>Junior DevOps Engineer | Software Developer</h2>
+          <div className="cert-badge">
+            <span className="azure-badge">☁️ 5x Microsoft Azure Certified</span>
+            </div>
+            <p className="hero-description">
+              React • API Integration • Node.js  • Game Development • AI Integration 
+              </p>
           <div className="hero-buttons">
             <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn-primary">Explore Universe ↓</button>
             <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub →</a>
@@ -63,7 +66,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>© 2026 Snethemba Shangase | <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a> | Built with ☕ and determination</p>
+        <p>© {new Date().getFullYear()} Snethemba Shangase | <a href="https://github.com/Vengefulcookie" target="_blank" rel="noopener noreferrer">GitHub</a> | Built with ☕ and determination</p>
       </footer>
     </div>
   );
