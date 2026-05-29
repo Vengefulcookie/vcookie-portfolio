@@ -5,27 +5,33 @@ import './GameCollection.css';
 function GameCollection({ projects }) {
     const [showAllGames, setShowAllGames] = useState(false);
   
+    // Include experimental category for the whiteboard
     const allGames = projects.filter(project => 
-        project.category === 'retro' || project.category === 'gameLab'
+        project.category === 'retro' || 
+        project.category === 'gameLab' ||
+        project.category === 'experimental'
     );
     
     if (allGames.length === 0) return null;
 
-   const getGameBadge = (category, title) => {
-    if (title.includes('Ember')) {
-        return { icon: "✨", label: "Atmospheric Runner", class: "badge-ember" };
-    }
-    if (title.includes('Claw')) {
-        return { icon: "🦀", label: "Arcade Sim", class: "badge-claw" };
-    }
-    if (category === 'retro') {
-        return { icon: "🎮", label: "Retro Arcade", class: "badge-retro" };
-    }
-    if (title.includes('Sunken')) {
-        return { icon: "⚔️", label: "Dark Fantasy", class: "badge-fantasy" };
-    }
-    return { icon: "🧪", label: "Game Lab", class: "badge-lab" };
-};
+    const getGameBadge = (category, title) => {
+        if (title.includes('Ember')) {
+            return { icon: "✨", label: "Atmospheric Runner", class: "badge-ember" };
+        }
+        if (title.includes('Claw')) {
+            return { icon: "🦀", label: "Arcade Sim", class: "badge-claw" };
+        }
+        if (category === 'retro') {
+            return { icon: "🎮", label: "Retro Arcade", class: "badge-retro" };
+        }
+        if (title.includes('Sunken')) {
+            return { icon: "⚔️", label: "Dark Fantasy", class: "badge-fantasy" };
+        }
+        if (category === 'experimental') {
+            return { icon: "🔬", label: "Experimental", class: "badge-experimental" };
+        }
+        return { icon: "🧪", label: "Game Lab", class: "badge-lab" };
+    };
 
     return (
         <div className="game-collection">

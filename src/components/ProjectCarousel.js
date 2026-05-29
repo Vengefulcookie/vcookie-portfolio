@@ -7,11 +7,12 @@ function ProjectCarousel({ projects }) {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayRef = useRef(null);
 
-  useEffect(() => { //autoplay
-    if (isAutoPlaying) {
+  // Auto-play functionality
+  useEffect(() => {
+    if (isAutoPlaying && projects.length > 0) {
       autoPlayRef.current = setInterval(() => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
-      }, 5000); // Change every 5 seconds
+      }, 5000);
     }
     return () => clearInterval(autoPlayRef.current);
   }, [isAutoPlaying, projects.length]);
@@ -19,7 +20,6 @@ function ProjectCarousel({ projects }) {
   const goToNext = () => {
     setIsAutoPlaying(false);
     setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
-   
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
@@ -42,6 +42,22 @@ function ProjectCarousel({ projects }) {
     return 'hidden';
   };
 
+  // Helper function to get button text and icon
+  const getLinkProps = (project) => {
+    if (project.comingSoon) {
+      return { text: "🔜 Coming Soon", icon: "🔨", isClickable: false };
+    }
+    if (project.url?.includes('youtu.be') || project.url?.includes('youtube.com')) {
+      return { text: "🎥 Watch Demo →", icon: "🎥", isClickable: true };
+    }
+    if (project.url?.includes('github.com')) {
+      return { text: "📂 View on GitHub →", icon: "📂", isClickable: true };
+    }
+    return { text: "🔗 Live Demo →", icon: "🔗", isClickable: true };
+  };
+
+  if (projects.length === 0) return null;
+
   return (
     <div className="carousel-container">
       <div className="carousel">
@@ -49,10 +65,12 @@ function ProjectCarousel({ projects }) {
           const position = getProjectPosition(index);
           if (position === 'hidden') return null;
           
+          const linkProps = getLinkProps(project);
+          
           return (
             <div
               key={project.id}
-              className={`carousel-item ${position} ${position === 'center' ? 'active' : ''}`}
+              className={`carousel-item ${position} ${position === 'center' ? 'active' : ''} ${project.comingSoon ? 'coming-soon' : ''}`}
               onClick={() => goToSlide(index)}
             >
               <div className="project-card-carousel" style={{ background: project.gradient }}>
@@ -62,20 +80,37 @@ function ProjectCarousel({ projects }) {
                     <Badge category={project.category} size="small" />
                   </div>
                   <p>{project.description}</p>
+                  {project.demoNote && (
+                    <div className="demo-note-inline">{project.demoNote}</div>
+                  )}
                   <div className="tech-stack">
                     {project.tech.map((tech, techIndex) => (
                       <span key={techIndex} className="tech-tag">{tech}</span>
                     ))}
                   </div>
-                  <a 
-                    href={project.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="live-link"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    🔗 Live Demo →
-                  </a>
+                  <div className="card-footer">
+                    {linkProps.isClickable ? (
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="live-link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {linkProps.icon} {linkProps.text}
+                      </a>
+                    ) : (
+                      <span 
+                        className="live-link coming-soon-link"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          alert(`🚧 ${project.title} is coming soon! Check back later.`);
+                        }}
+                      >
+                        {linkProps.icon} {linkProps.text}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -83,32 +118,43 @@ function ProjectCarousel({ projects }) {
         })}
       </div>
 
-      <button className="carousel-nav prev" onClick={goToPrev}>
-        ‹
-      </button>
-      <button className="carousel-nav next" onClick={goToNext}>
-        ›
-      </button>
+      {/* Navigation Buttons - only show if more than 1 project */}
+      {projects.length > 1 && (
+        <>
+          <button className="carousel-nav prev" onClick={goToPrev}>
+            ‹
+          </button>
+          <button className="carousel-nav next" onClick={goToNext}>
+            ›
+          </button>
+        </>
+      )}
 
-      <div className="carousel-dots">
-        {projects.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div>
+      {/* Dots Indicator */}
+      {projects.length > 1 && (
+        <div className="carousel-dots">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${index === activeIndex ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
+      )}
 
-      <div className="auto-play-indicator">
-        <span>Auto-rotating every 5s</span>
-        <button 
-          className={`auto-play-toggle ${!isAutoPlaying ? 'paused' : ''}`}
-          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-        >
-          {isAutoPlaying ? '⏸' : '▶'}
-        </button>
-      </div>
+      {/* Auto-play indicator */}
+      {projects.length > 1 && (
+        <div className="auto-play-indicator">
+          <span>Auto-rotating every 5s</span>
+          <button 
+            className={`auto-play-toggle ${!isAutoPlaying ? 'paused' : ''}`}
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+          >
+            {isAutoPlaying ? '⏸' : '▶'}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

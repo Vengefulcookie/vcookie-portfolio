@@ -2,7 +2,6 @@ import React from 'react';
 import './Badge.css';
 
 function Badge({ category, size = 'medium' }) {
- 
   const badgeConfig = {
     game: {
       icon: "🎮",
@@ -36,9 +35,21 @@ function Badge({ category, size = 'medium' }) {
     },
     notes: {
       icon: "📚",
-      label: "Notes & Trackers",
+      label: "Notes App",
       className: "badge-notes",
       color: "#07f8f8"
+    },
+    gameLab: { 
+      icon: "🧪", 
+      label: "Game Lab", 
+      className: "badge-lab", 
+      color: "#c39bd3" 
+    },
+    experimental: { 
+      icon: "🔬", 
+      label: "Experimental", 
+      className: "badge-experimental", 
+      color: "#e67e22" 
     }
   };
 

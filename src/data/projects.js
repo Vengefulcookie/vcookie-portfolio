@@ -72,32 +72,42 @@ const projects = [
         gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)"
     },
     {
-    id: 9,
-    title: "🦀 Claw Machine",
-    description: "Test your skill! Move the claw, grab prizes, and collect unique stickers. Costs 1 credit per play. Can you win them all?",
-    tech: ["JavaScript", "Canvas API", "Collision Detection", "Game Logic"],
-    url: "https://vcookie-claw-machine.netlify.app",
-    category: "gameLab",
-    gradient: "linear-gradient(135deg, #2a4a5a 0%, #1a3a4a 50%, #0a2a3a 100%)" 
-},
-{
-    id: 10,
-    title: "✨ Ember Run",
-    description: "A atmospheric collection game. Run through the dark, collect lanterns while keeping your lives. How far can you go?",
-    tech: ["JavaScript", "HTML5 Canvas", "Game Loop", "Collision Detection"],
-    url: "https://vcookie-ember-run.netlify.app",
-    category: "gameLab",
-    gradient: "linear-gradient(135deg, #2a1a3a 0%, #1a0a2a 50%, #0a0a1a 100%)"
-},
-{
-    id: 11,
-    title: "💥 Breakout",
-    description: "Classic arcade block-breaking action! Bounce the ball, destroy all the bricks, and don't let it fall. How high can you score?",
-    tech: ["JavaScript", "HTML5 Canvas", "Collision Detection", "Game Physics"],
-    url: "https://vcookie-breakout.netlify.app",
-    category: "retro",
-    gradient: "linear-gradient(135deg, #2a2a4a 0%, #1a1a3a 50%, #0a0a2a 100%)"
-}
+        id: 9,
+        title: "🦀 Claw Machine",
+        description: "Test your skill! Move the claw, grab prizes, and collect unique stickers. Costs 1 credit per play. Can you win them all?",
+        tech: ["JavaScript", "Canvas API", "Collision Detection", "Game Logic"],
+        url: "https://vcookie-claw-machine.netlify.app",
+        category: "gameLab",
+        gradient: "linear-gradient(135deg, #2a4a5a 0%, #1a3a4a 50%, #0a2a3a 100%)"
+    },
+    {
+        id: 10,
+        title: "✨ Ember Run",
+        description: "An atmospheric collection game. Run through the dark, collect lanterns while keeping your lives. How far can you go?",
+        tech: ["JavaScript", "HTML5 Canvas", "Game Loop", "Collision Detection"],
+        url: "https://vcookie-ember-run.netlify.app",
+        category: "gameLab",
+        gradient: "linear-gradient(135deg, #2a1a3a 0%, #1a0a2a 50%, #0a0a1a 100%)"
+    },
+    {
+        id: 11,
+        title: "💥 Breakout",
+        description: "Classic arcade block-breaking action! Bounce the ball, destroy all the bricks, and don't let it fall. How high can you score?",
+        tech: ["JavaScript", "HTML5 Canvas", "Collision Detection", "Game Physics"],
+        url: "https://vcookie-breakout.netlify.app",
+        category: "retro",
+        gradient: "linear-gradient(135deg, #2a2a4a 0%, #1a1a3a 50%, #0a0a2a 100%)"
+    },
+    {
+        id: 12,
+        title: "🔐 Protected Notes App",
+        description: "Full-stack notes app with user authentication. Sign up, log in, and create private notes — each user has their own encrypted vault.",
+        tech: ["Node.js", "Express", "MySQL", "bcrypt", "Session Auth"],
+        url: "https://youtu.be/aOMVieUtltg",
+        demoNote: "⚡ Backend demo. Watch the video or clone from GitHub.",
+        category: "notes",
+        gradient: "linear-gradient(135deg, #0a2a1a 0%, #0a3a2a 50%, #0a1a0a 100%)"
+    },
 ];
 
 export default projects;

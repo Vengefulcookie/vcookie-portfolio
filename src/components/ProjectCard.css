@@ -109,3 +109,23 @@
     margin-bottom: 0;
     flex: 1;
 }
+
+.demo-note-inline {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: #f5b041;
+    margin: 10px 0;
+    border-left: 3px solid #f5b041;
+}
+
+.project-card.coming-soon {
+    opacity: 0.8;
+    filter: grayscale(0.2);
+}
+
+.project-card.coming-soon:hover {
+    opacity: 0.9;
+    filter: grayscale(0.1);
+}
