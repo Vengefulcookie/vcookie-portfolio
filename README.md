@@ -8,11 +8,9 @@
 [![Azure Certified](https://img.shields.io/badge/Azure-5x_Certified-0078d4)](https://learn.microsoft.com/en-us/users/snethembashangase/)
 
 ## What This Portfolio Is
-
 This is my personal corner of the internet — a place where I show what I can build. You'll find playable browser games, useful web applications, and an AI assistant that knows everything about my background.
 
 **What you can do here:**
-
 - **Play 5 games** — Retro Racer, The Sunken Coin, Claw Machine, Ember Run, and Breakout
 - **Use 6 web apps** — Country Explorer, Dessert Generator, Weather App, World Clock, Website Hygiene Report
 - **Chat with my AI Assistant** — Ask about my skills, certifications, or any project
@@ -74,24 +72,6 @@ No installation needed — it runs right in your browser.
 3. Click on any project card to see it live
 4. Check the CI/CD badge — that's real, GitHub + Netlify auto-deploys every change
 
-## Project Structure
-portfolio/
-├── public/
-│ └── index.html
-├── src/
-│ ├── components/
-│ │ ├── ProjectCarousel.js # Rotating carousel for apps
-│ │ ├── GameCollection.js # Game Lab section
-│ │ ├── Chatbot.js # AI Assistant
-│ │ ├── Badge.js # Category badges
-│ │ └── [other components...there's a lot...]
-│ ├── data/
-│ │ └── projects.js # All project data in one place
-│ ├── App.js # Main layout
-│ ├── App.css # Global styles
-│ └── index.js # Entry point
-└── package.json
-
 ## Running Locally
 
 Want to run this portfolio on your own computer? Here's how:
@@ -114,47 +94,47 @@ To create a production build:
 
 bash
 npm run build
+```
+
 The built files will be in the build/ folder, ready to deploy to Netlify or any static host.
 
-What I Learned Building This
-React State Management — The carousels were tricky. Each one needs to track its active index, manage auto-rotation, and handle user interactions (clicking dots or arrows should pause auto-rotation temporarily). I learned about useEffect cleanup functions to prevent memory leaks.
+## What I Learned Building This
+-- React State Management — The carousels were tricky. Each one needs to track its active index, manage auto-rotation, and handle user interactions (clicking dots or arrows should pause auto-rotation temporarily). I learned about useEffect cleanup functions to prevent memory leaks.
 
-Canvas Games — Every game in this portfolio started as a separate project. Bringing them together taught me about iframe embeds and how to isolate game logic from the main React app. The collision detection systems all work differently, but that's okay — each game has its own feel.
+-- Canvas Games — Every game in this portfolio started as a separate project. Bringing them together taught me about iframe embeds and how to isolate game logic from the main React app. The collision detection systems all work differently, but that's okay — each game has its own feel.
 
-AI Integration — The chatbot doesn't actually connect to an LLM API. It's a simulated RAG system that responds to keywords. This kept the portfolio self-contained and deployment simple. But it taught me how real RAG works — chunking, retrieval, and prompt engineering.
+-- AI Integration — The chatbot doesn't actually connect to an LLM API. It's a simulated RAG system that responds to keywords. This kept the portfolio self-contained and deployment simple. But it taught me how real RAG works — chunking, retrieval, and prompt engineering.
 
-Responsive Design — The portfolio looks good on a 4K monitor and on a phone. Media queries handle the layout shifts, and the carousels degrade gracefully on small screens.
+-- Responsive Design — The portfolio looks good on a 4K monitor and on a phone. Media queries handle the layout shifts, and the carousels degrade gracefully on small screens.
 
-CI/CD — Every push to GitHub triggers a Netlify build. Seeing the "building..." status turn into a live URL never gets old. I learned about environment variables for production builds and how to debug build failures (usually missing imports or unused variables).
+-- CI/CD — Every push to GitHub triggers a Netlify build. Seeing the "building..." status turn into a live URL never gets old. I learned about environment variables for production builds and how to debug build failures (usually missing imports or unused variables).
 
-Known Issues & Future Plans
+## Known Issues & Future Plans
 Known issues:
-The custom cursor (if added in the future) sometimes lags on slower machines
-Some API calls (Weather, Countries) have rate limits
+-- The custom cursor (if added in the future) sometimes lags on slower machines
+-- Some API calls (Weather, Countries) have rate limits
 
-Features I want to add:
-More games — planning a Godot game that exports to WebAssembly
-Sound toggle with space ambient music
-Dark mode toggle (light mode for daytime browsing)
-Blog section for writing about what I'm learning
-Electron desktop app version
+## Features I want to add:
+-- More games — planning a Godot game that exports to WebAssembly
+-- Sound toggle with space ambient music
+-- Dark mode toggle (light mode for daytime browsing)
+-- Blog section for writing about what I'm learning
+-- Electron desktop app version
 
-Contact
+## Contact
 I'm actively looking for DevOps and Software Development roles, especially opportunities that would let me relocate so I can see the world.
+-- GitHub: github.com/Vengefulcookie
+-- LinkedIn: linkedin.com/in/snethemba-shangase-softw-mech-civil0101
+-- Email: snethemba.nosipho.shangase@gmail.com
 
-GitHub: github.com/Vengefulcookie
-LinkedIn: linkedin.com/in/snethemba-shangase-softw-mech-civil0101
-Email: snethemba.nosipho.shangase@gmail.com
-
-License
+## License
 This project is open source. Feel free to look around, learn from the code, or use it as inspiration for your own portfolio.
 
-Acknowledgments
-React team — For making frontend development delightful
-
-OpenWeather, REST Countries, and Recipe APIs — For free data that made my apps possible
-Netlify — For generous free hosting
-My coffee maker — For keeping me going during late-night coding sessions
+##Acknowledgments
+-- React team — For making frontend development delightful
+-- OpenWeather, REST Countries, and Recipe APIs — For free data that made my apps possible
+-- Netlify — For generous free hosting
+-- My coffee maker — For keeping me going during late-night coding sessions
 
 Built with React, ☕ coffee, and a determination to build things that work
 ⭐ If you like this portfolio, consider starring the repository! ⭐
