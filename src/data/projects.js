@@ -114,7 +114,7 @@ const projects = [
         description: "AI-powered tool that transforms generic CVs into role-specific applications. Get ATS-optimised summaries, cover letters, skill gap analysis, and certification roadmaps.",
         tech: ["Groq AI", "Gemini AI", "Microsoft Foundry IQ", "Vanilla JS", "Azure AI Search"],
         url: "https://vcookie-job-application-agent.netlify.app",
-        category: "hackathon",
+        category: "tool",
         gradient: "linear-gradient(135deg, #1a3a5a 0%, #0a2a4a 50%, #0a1a3a 100%)"
 },
 ];
