@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# 🌌 Snethemba Shangase - Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A galactic-themed developer portfolio showcasing 5 playable games, 6 web applications, an AI-powered chatbot, and my journey as a Junior DevOps Engineer.
 
-## Available Scripts
+[![Live Portfolio](https://img.shields.io/badge/View-Live_Portfolio-brightgreen)](https://vcookie-portfolio.netlify.app)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue)](https://github.com/Vengefulcookie/portfolio)
+[![Netlify Status](https://img.shields.io/badge/Deployed-Netlify-blueviolet)](https://app.netlify.com/sites/vcookie-portfolio)
+[![Azure Certified](https://img.shields.io/badge/Azure-5x_Certified-0078d4)](https://learn.microsoft.com/en-us/users/snethembashangase/)
 
-In the project directory, you can run:
+## What This Portfolio Is
 
-### `npm start`
+This is my personal corner of the internet — a place where I show what I can build. You'll find playable browser games, useful web applications, and an AI assistant that knows everything about my background.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**What you can do here:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Play 5 games** — Retro Racer, The Sunken Coin, Claw Machine, Ember Run, and Breakout
+- **Use 6 web apps** — Country Explorer, Dessert Generator, Weather App, World Clock, Website Hygiene Report
+- **Chat with my AI Assistant** — Ask about my skills, certifications, or any project
+- **Explore my GitHub** — All code is open source
+- **View my resume** — Available for download in the footer
 
-### `npm test`
+##  How I Built This
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- **React** — For the component-based UI
+- **CSS3** — For the galactic gradient effects and animations
+- **Canvas API** — For all the browser-based games
 
-### `npm run build`
+### Games (All Vanilla JavaScript + Canvas)
+| Game | Tech | What You Do |
+|------|------|-------------|
+| Retro Racer | Canvas, Game Loop | Dodge traffic, survive faster speeds |
+| The Sunken Coin | Canvas, Physics | Flip a cursed coin, manage risk |
+| Claw Machine | Canvas, Collision | Move claw, grab stickers |
+| Ember Run | Canvas, Lighting | Collect lanterns in darkness |
+| Breakout | Canvas, Angles | Break bricks, classic arcade |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Web Applications
+| App | Tech | What It Does |
+|-----|------|--------------|
+| Country Explorer | React, REST API | Search and compare countries |
+| Weather App | React, OpenWeather | Real-time weather anywhere |
+| Website Hygiene Report | JS, Security APIs | Grade websites A+ through F |
+| World Clock | JS, Moment.js | Track time across cities |
+| Dessert Generator | JS, Recipe API | Random sweet recipes |
+| AI Assistant | React, RAG, LLM | Chatbot trained on my CV |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### DevOps & Deployment
+- **Netlify** — Hosting and auto-deploy from GitHub
+- **CI/CD** — Every push to main triggers a new deployment
+- **Environment Variables** — For API keys (never committed to GitHub)
+- **Responsive Design** — Works on desktop and mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Design Choices
 
-### `npm run eject`
+**Why the space theme?** I've always been fascinated by the cosmos. The orbs, rings, and gradient backgrounds aren't random — they're meant to feel like floating through a nebula. The glow effects and smooth animations add to the "galactic" feel without distracting from the content.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Colors:**
+- Deep space blue: `#0a0a2a` to `#050510`
+- Nebula purple: `#6a4fa5`
+- Star light blue: `#7ab3c8`
+- Text glow: subtle shadows to mimic starlight
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Typography:** Inter (clean, modern, readable even on dark backgrounds)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Live Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Click here to open the live portfolio](https://vcookie-portfolio.netlify.app)
+No installation needed — it runs right in your browser.
 
-## Learn More
+**Try these things while you're there:**
+1. Scroll through the Game Lab carousel — games auto-rotate every 5 seconds
+2. Ask the AI Assistant "What Azure certs do you have?"
+3. Click on any project card to see it live
+4. Check the CI/CD badge — that's real, GitHub + Netlify auto-deploys every change
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
+portfolio/
+├── public/
+│ └── index.html
+├── src/
+│ ├── components/
+│ │ ├── ProjectCarousel.js # Rotating carousel for apps
+│ │ ├── GameCollection.js # Game Lab section
+│ │ ├── Chatbot.js # AI Assistant
+│ │ ├── Badge.js # Category badges
+│ │ └── [other components...there's a lot...]
+│ ├── data/
+│ │ └── projects.js # All project data in one place
+│ ├── App.js # Main layout
+│ ├── App.css # Global styles
+│ └── index.js # Entry point
+└── package.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running Locally
 
-### Code Splitting
+Want to run this portfolio on your own computer? Here's how:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Clone the repository
+git clone https://github.com/Vengefulcookie/portfolio.git
 
-### Analyzing the Bundle Size
+# Navigate into the folder
+cd portfolio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Install dependencies
+npm install
 
-### Making a Progressive Web App
+# Start the development server
+npm start
+The portfolio will open at http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To create a production build:
 
-### Advanced Configuration
+bash
+npm run build
+The built files will be in the build/ folder, ready to deploy to Netlify or any static host.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+What I Learned Building This
+React State Management — The carousels were tricky. Each one needs to track its active index, manage auto-rotation, and handle user interactions (clicking dots or arrows should pause auto-rotation temporarily). I learned about useEffect cleanup functions to prevent memory leaks.
 
-### Deployment
+Canvas Games — Every game in this portfolio started as a separate project. Bringing them together taught me about iframe embeds and how to isolate game logic from the main React app. The collision detection systems all work differently, but that's okay — each game has its own feel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+AI Integration — The chatbot doesn't actually connect to an LLM API. It's a simulated RAG system that responds to keywords. This kept the portfolio self-contained and deployment simple. But it taught me how real RAG works — chunking, retrieval, and prompt engineering.
 
-### `npm run build` fails to minify
+Responsive Design — The portfolio looks good on a 4K monitor and on a phone. Media queries handle the layout shifts, and the carousels degrade gracefully on small screens.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CI/CD — Every push to GitHub triggers a Netlify build. Seeing the "building..." status turn into a live URL never gets old. I learned about environment variables for production builds and how to debug build failures (usually missing imports or unused variables).
+
+Known Issues & Future Plans
+Known issues:
+The custom cursor (if added in the future) sometimes lags on slower machines
+Some API calls (Weather, Countries) have rate limits
+
+Features I want to add:
+More games — planning a Godot game that exports to WebAssembly
+Sound toggle with space ambient music
+Dark mode toggle (light mode for daytime browsing)
+Blog section for writing about what I'm learning
+Electron desktop app version
+
+Contact
+I'm actively looking for DevOps and Software Development roles, especially opportunities that would let me relocate so I can see the world.
+
+GitHub: github.com/Vengefulcookie
+LinkedIn: linkedin.com/in/snethemba-shangase-softw-mech-civil0101
+Email: snethemba.nosipho.shangase@gmail.com
+
+License
+This project is open source. Feel free to look around, learn from the code, or use it as inspiration for your own portfolio.
+
+Acknowledgments
+React team — For making frontend development delightful
+
+OpenWeather, REST Countries, and Recipe APIs — For free data that made my apps possible
+Netlify — For generous free hosting
+My coffee maker — For keeping me going during late-night coding sessions
+
+Built with React, ☕ coffee, and a determination to build things that work
+⭐ If you like this portfolio, consider starring the repository! ⭐
