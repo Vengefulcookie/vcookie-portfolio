@@ -134,7 +134,7 @@ This project is open source. Feel free to look around, learn from the code, or u
 - React team — For making frontend development delightful
 - OpenWeather, REST Countries, and Recipe APIs — For free data that made my apps possible
 - Netlify — For generous free hosting
-- My coffee maker — For keeping me going during late-night coding sessions
+- My favourite hot chocolate with marshmallows — For keeping me going during late-night coding sessions
 
-Built with React, ☕ coffee, and a determination to build things that work
+Built with React, ☕, and a determination to build things that work
 ⭐ If you like this portfolio, consider starring the repository! ⭐
