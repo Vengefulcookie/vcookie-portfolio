@@ -108,6 +108,15 @@ const projects = [
         category: "notes",
         gradient: "linear-gradient(135deg, #0a2a1a 0%, #0a3a2a 50%, #0a1a0a 100%)"
     },
+    {
+        id: 13,
+        title: "🤖 Job Application Agent",
+        description: "AI-powered tool that transforms generic CVs into role-specific applications. Get ATS-optimised summaries, cover letters, skill gap analysis, and certification roadmaps.",
+        tech: ["Groq AI", "Gemini AI", "Microsoft Foundry IQ", "Vanilla JS", "Azure AI Search"],
+        url: "https://vcookie-job-application-agent.netlify.app",
+        category: "tool",
+        gradient: "linear-gradient(135deg, #1a3a5a 0%, #0a2a4a 50%, #0a1a3a 100%)"
+},
 ];
 
 export default projects;

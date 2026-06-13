@@ -50,7 +50,13 @@ function Badge({ category, size = 'medium' }) {
       label: "Experimental", 
       className: "badge-experimental", 
       color: "#e67e22" 
-    }
+    },
+    hackathon: {
+    icon: "🏆",
+    label: "Hackathon Project",
+    className: "badge-hackathon",
+    color: "#f39c12"
+}
   };
 
   const config = badgeConfig[category] || badgeConfig.app;
