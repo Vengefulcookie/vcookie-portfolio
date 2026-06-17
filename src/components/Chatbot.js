@@ -12,99 +12,51 @@ function Chatbot() {
     const q = question.toLowerCase();
     
     if (q.includes('azure') || q.includes('cert') || q.includes('certification')) {
-      return "Snethemba has 5 Microsoft Azure certifications:\n• DevOps Engineer Expert (2025)\n• Azure Developer Associate (2025)\n• Azure Administrator Associate (2025)\n• Azure AI Fundamentals (2025)\n• Azure Fundamentals (2025)\nShe's actively working toward Azure Solutions Architect next!";
+      return "Snethemba has 5 Microsoft Azure certifications (all awarded 2025):\n\n1. **DevOps Engineer Expert** — Azure DevOps pipelines, release management, infrastructure as code (IaC), YAML pipelines, GitHub Actions integration, Azure Monitor, ARM templates, Bicep.\n\n2. **Azure Developer Associate** — Azure App Service, Functions (serverless), Azure Storage, Cosmos DB, Azure SQL, Key Vault, Azure AD / Entra ID, containerisation.\n\n3. **Azure Administrator Associate** — Subscriptions, VMs, virtual networks, NSGs, Azure AD, MFA, Storage accounts, Backup, load balancers, Application Gateway, Azure Monitor.\n\n4. **Azure AI Fundamentals** — Azure AI Services (Vision, Speech, Language), Azure OpenAI, prompt engineering, Azure Cognitive Search, RAG concepts, Azure AI Studio.\n\n5. **Azure Fundamentals** — Core Azure concepts, regions, availability zones, pricing, SLAs, cloud concepts (IaaS, PaaS, SaaS).";
     }
     
     if (q.includes('frontend') || q.includes('front-end')) {
-      return "Frontend skills: React, JavaScript, HTML5, CSS3, Canvas API. She builds interactive web apps and browser-based games with smooth UI/UX.";
+      return "Frontend skills: React, TypeScript, JavaScript ES6+, HTML5 (including Canvas API), CSS3 (flexbox, grid, animations). She builds interactive web apps and browser-based games with smooth UI/UX.";
     }
     
     if (q.includes('game') || q.includes('game dev') || q.includes('game development')) {
-      return "Game Development skills: Game loops, collision detection, delta time, physics simulation, canvas rendering. She's built 5 playable browser games (Retro Racer, Breakout, Claw Machine, Ember Run, The Sunken Coin). Each one tests different mechanics — from racing to risk management to precision timing.";
+      return "Game Development skills: Game loops (requestAnimationFrame, delta time), collision detection (AABB bounding boxes), physics simulation, Canvas rendering, difficulty scaling, game state management, dynamic lighting effects. She's built 5 playable browser games.";
     }
     
     if (q.includes('backend') || q.includes('node') || q.includes('express')) {
-      return "Backend skills: Node.js, Express, REST APIs, WebSockets. She's built full-stack apps with user authentication and real-time features.";
+      return "Backend skills: Node.js, Express.js, REST API design, authentication (bcrypt, session management), error handling, webhook architecture.";
     }
     
     if (q.includes('devops') || q.includes('cloud') || q.includes('ci/cd')) {
-      return "Cloud & DevOps: 5x Microsoft Azure certified, Netlify deployments, CI/CD with GitHub + Netlify auto-deploy. She automates everything she can!";
+      return "Cloud & DevOps: 5x Microsoft Azure certified, Netlify deployments, CI/CD with GitHub + Netlify auto-deploy, GitHub Actions, environment variables management. She automates everything she can!";
     }
     
     if (q.includes('database') || q.includes('mysql') || q.includes('sql')) {
-      return "Database skills: MySQL, SQLite, phpMyAdmin. She's built full-stack apps with user authentication and encrypted data storage.";
+      return "Database skills: MySQL (schema design, CRUD, JOINs, indexes), SQLite, phpMyAdmin, IndexedDB (client-side storage).";
     }
     
     if (q.includes('security') || q.includes('secure')) {
-      return "Security skills: CORS proxies, bcrypt password hashing, session management, XSS prevention. Her Website Hygiene Report tool checks SSL, security headers, and privacy policies.";
+      return "Security skills: bcrypt password hashing, session management, CORS configuration, XSS prevention, HTTPS enforcement, security headers (HSTS, CSP, X-Frame-Options).";
     }
     
     if (q.includes('ai') || q.includes('prompt') || q.includes('llm') || q.includes('rag')) {
-      return "AI skills: Prompt Engineering, RAG (Retrieval-Augmented Generation), Azure AI, LLM integration. She built this AI Assistant chatbot trained on her CV!";
+      return "AI skills: Prompt engineering (system prompts, few-shot examples, chain-of-thought), RAG (knowledge base structuring, chunk retrieval, context window management), LLM integration (Groq, Gemini, Azure OpenAI), Microsoft Foundry IQ (Azure AI Search), Azure AI Services.";
     }
     
     if (q.includes('tools') || q.includes('git') || q.includes('vscode')) {
-      return "Tools: Git, GitHub, VS Code, Netlify, cPanel, Postman. She uses GitHub + Netlify for CI/CD auto-deploy on every push.";
-    }
-    
-    if (q.includes('retro racer') || (q.includes('racing') && q.includes('game'))) {
-      return "🏎️ **Retro Racer** — A high-speed arcade racing game where you dodge traffic through multiple lanes. The longer you survive, the faster it gets. Features real-time collision detection, increasing difficulty curves, and a local high-score system. Can you beat your best run?";
-    }
-    
-    if (q.includes('sunken coin') || (q.includes('cursed') && q.includes('coin'))) {
-      return "⚔️ **The Sunken Coin** — A dark fantasy game of risk and reward. You've found a cursed coin that whispers promises of luck. Flip it 15 times to survive. Heads gives +1 life, Tails takes -1 life. Land 3 in a row and the stakes double — double reward or double curse. Every flip tests your nerve. Will you walk away or push your luck?";
-    }
-    
-    if (q.includes('claw') || q.includes('claw machine')) {
-      return "🦀 **Claw Machine** — An interactive arcade simulator where skill meets chance. Move the claw left and right, time your drop perfectly, and grab prizes. Win 6 unique stickers to complete your collection. Each play costs a credit, and random animal facts celebrate your wins. It's like the arcade, but you don't have to leave your house!";
-    }
-    
-    if (q.includes('breakout')) {
-      return "💥 **Breakout** — The classic arcade block-breaker rebuilt from scratch. Bounce the ball, destroy every brick, and don't let it fall past your paddle. Features pixel-perfect collision detection, progressive difficulty, and that satisfying 'pop' when bricks shatter. Simple to learn, hard to master — just like the original.";
-    }
-    
-    if (q.includes('ember') || q.includes('ember run')) {
-      return "✨ **Ember Run** — An atmospheric runner set in darkness. You're alone in the shadows, racing to collect 10 glowing lanterns. Each lantern you grab lights your path, but danger surrounds you. You have 3 lives. Can you reach the light before it fades completely? A game about perseverance and hope.";
-    }
-    
-    if (q.includes('country explorer') || (q.includes('country') && q.includes('api'))) {
-      return "🌍 **Country Explorer** — A React-powered world atlas. Search any country and instantly see its flag, capital, population, currency, and languages. The coolest feature? Compare two countries side-by-side to see how they stack up. Perfect for geography nerds and curious minds.";
-    }
-    
-    if (q.includes('hygiene') || q.includes('website hygiene') || q.includes('security checker')) {
-      return "🔍 **Website Hygiene Report** — A security and performance scanner that tells you if a website is healthy or infected... with bad practices! It checks HTTPS, security headers (HSTS, CSP, X-Frame), image alt text, and load time. Then it gives a letter grade from A+ down to F. Think of it as a health checkup for the internet.";
-    }
-    
-    if (q.includes('weather') || q.includes('weather app')) {
-      return "⛅ **Weather App** — A clean, real-time weather dashboard. Enter any city and get temperature, humidity, wind speed, and conditions. Uses geolocation to find your local weather instantly. No ads, no clutter — just the forecast you need.";
-    }
-    
-    if (q.includes('world clock')) {
-      return "🕐 **World Clock** — Never miss a meeting across time zones. Track current time in New York, Tokyo, Johannesburg, Paris, London, and beyond. Built with Moment.js for accurate timezone handling. Perfect for remote workers and global teams.";
-    }
-    
-    if (q.includes('dessert') || q.includes('recipe')) {
-      return "🍰 **Dessert Recipe Generator** — When you're craving something sweet but don't know what. Click generate and get a random dessert recipe, or search for your favorite. From chocolate cake to crème brûlée — cosmic inspiration for your next baking adventure.";
-    }
-    
-    if (q.includes('ai assistant') || (q.includes('chatbot') && !q.includes('update'))) {
-      return "🤖 **AI Assistant** — That's me! I'm a RAG-powered chatbot trained directly on Snethemba's CV, skills, and projects. Ask me anything about her experience, certifications, or code. I know everything she knows — and I don't sleep. Go ahead, test me.";
-    }
-    
-    if (q.includes('notes') || q.includes('protected notes') || q.includes('full-stack')) {
-      return "🔐 **Protected Notes App** — A full-stack, authentication-powered notes app. Sign up, log in, and create private notes that only you can see. Each user has their own encrypted vault. Tech stack: Node.js, Express, MySQL, bcrypt for password hashing, and session management. Watch the demo video on YouTube to see it in action!";
+      return "Tools: Git, GitHub (Actions, Pages), VS Code, Postman, Azure Portal, cPanel, phpMyAdmin, Notion (documentation), npm, Google AI Studio.";
     }
     
     if (q.includes('experience') || q.includes('work') || q.includes('job')) {
-      return "Snethemba has 2+ years of experience including: Site Clerk at Chushisanani Mzansi (digital workflow management, invoice processing, technical reporting), Project Manager at Ijozilami Construction (full project lifecycle, team coordination, risk assessment), and freelance full-stack development. She's also completed an IT Systems Development FET at Dynamic DNA.";
+      return "Snethemba has 1+ years of tech experience as a Software Development Intern at Saints Media (2025–2026), where she built React/Node/PHP applications, automated workflows with n8n, and implemented authentication and security. Previously, she was a Site Clerk (Chushisanani Mzansi, 2024) and Project Manager (Ijozilami Construction, 2022–2023), which gave her structured project management and risk assessment skills.";
     }
     
     if (q.includes('education') || q.includes('degree') || q.includes('study')) {
-      return "Snethemba holds a National Diploma in Civil Engineering from Durban University of Technology (2021), an N4 in Mechanical Engineering, and is completing an FET in Information Technology - Systems Development at Dynamic DNA (2026). Her engineering background gives her structured problem-solving skills that transfer directly to software development.";
+      return "Snethemba holds a National Diploma in Civil Engineering from Durban University of Technology (2021), an N4 in Mechanical Engineering (2017), and is completing an FET in Information Technology - Systems Development at Dynamic DNA (2026). Her engineering background gives her structured problem-solving skills that transfer directly to software development.";
     }
     
     if (q.includes('soft skill') || q.includes('personality') || q.includes('team')) {
-      return "Snethemba brings: clear technical communication (explaining complex ideas simply), cross-disciplinary problem-solving (engineering + coding), leadership (managed project teams), time management, critical thinking, and a collaborative mindset. She's genuinely curious and loves learning from teammates.";
+      return "Snethemba brings: clear technical communication, cross-disciplinary problem-solving (engineering + coding), leadership (managed project teams), time management, critical thinking, and a collaborative mindset. She's genuinely curious and loves learning from teammates.";
     }
     
     if (q.includes('relocate') || q.includes('visa') || q.includes('netherlands')) {
@@ -112,7 +64,67 @@ function Chatbot() {
     }
     
     if (q.includes('hire') || q.includes('why should') || q.includes('strengths')) {
-      return "Snethemba brings a rare combination: 5x Azure certifications, full-stack development (React/Node), AI integration skills, game development (5 published games), and project management experience. She's curious, resourceful, and builds real things you can play and use.";
+      return "Snethemba brings a rare combination: 5x Azure certifications (including DevOps Expert), full-stack development (React/Node), AI integration skills, game development (5 published games), and project management experience. She's curious, resourceful, and builds real things you can play and use.";
+    }
+    
+    if (q.includes('retro racer') || (q.includes('racing') && q.includes('game'))) {
+      return "🏎️ **Retro Racer** — Arcade racing game. Dodge traffic through multiple lanes. Speed increases the longer you survive. Built with Canvas API, requestAnimationFrame, delta time for frame-rate independence, and AABB collision detection. How long can you last?";
+    }
+    
+    if (q.includes('sunken coin') || (q.includes('cursed') && q.includes('coin'))) {
+      return "⚔️ **The Sunken Coin** — Dark fantasy risk game. Flip a cursed coin 15 times. Heads +1 life, Tails -1 life. Land 3 in a row and the stakes double — double reward or double curse. Built with Canvas API, streak mechanics, and probability design.";
+    }
+    
+    if (q.includes('claw') || q.includes('claw machine')) {
+      return "🦀 **Claw Machine** — Physics-based claw game. Move ← →, drop with Space. Grab 6 unique stickers. Credit system (you start with 5). Random animal facts when you win. Built with Canvas API, physics simulation, and collision detection.";
+    }
+    
+    if (q.includes('ember run') || (q.includes('ember') && q.includes('run'))) {
+      return "✨ **Ember Run** — Atmospheric side-scroller. Run in darkness, collect 10 lanterns. Each lantern lights your path. 3 lives. Built with Canvas API, dynamic lighting effects (screen brightness tied to game state), and collision detection.";
+    }
+    
+    if (q.includes('breakout')) {
+      return "💥 **Breakout** — Classic block-breaker. Bounce the ball, destroy every brick. Ball angle changes based on where it hits the paddle. Progressive speed increase. Built with Canvas API, angle-based physics, and pixel-perfect collision detection.";
+    }
+    
+    if (q.includes('country explorer') || (q.includes('country') && q.includes('api'))) {
+      return "🌍 **Country Explorer** — React app. Search any country and see its flag, capital, population, currency, and languages. Compare two countries side-by-side. Uses REST Countries API with async data fetching and loading state management.";
+    }
+    
+    if (q.includes('hygiene') || q.includes('website hygiene') || q.includes('security checker')) {
+      return "🔍 **Website Hygiene Report** — Security and performance scanner. Checks HTTPS, HSTS, CSP, X-Frame-Options, alt text, SSL validity, and load time. Returns a letter grade from A+ to F. Built with JavaScript, CORS proxy, Security APIs, and Web Vitals.";
+    }
+    
+    if (q.includes('weather') || q.includes('weather app')) {
+      return "⛅ **Weather App** — React app. Real-time weather for any city — temperature, humidity, wind speed, and conditions. Uses OpenWeather API and geolocation API (with permission handling and graceful fallback).";
+    }
+    
+    if (q.includes('world clock')) {
+      return "🕐 **World Clock** — Track current time across multiple cities — New York, Tokyo, Johannesburg, Paris, London, and more. Built with JavaScript and Moment.js for UTC offsets and DST handling.";
+    }
+    
+    if (q.includes('dessert') || q.includes('recipe')) {
+      return "🍰 **Dessert Recipe Generator** — Generate random dessert recipes or search for your favorites. Built with JavaScript, Recipe API, and CSS animations. Handles different API response structures and missing data fallbacks.";
+    }
+    
+    if (q.includes('ai assistant') || (q.includes('chatbot') && !q.includes('update'))) {
+      return "🤖 **AI Assistant** — That's me! I'm a RAG-powered chatbot trained on Snethemba's CV, skills, and projects. Ask me anything about her experience, certifications, or code. I know everything she knows — and I don't sleep. Built with React, RAG (knowledge base structuring, chunk retrieval, context window management), prompt engineering, and LLM integration.";
+    }
+    
+    if (q.includes('job application agent') || (q.includes('agent') && q.includes('job'))) {
+      return "🤖 **Job Application Agent** — Built for the Microsoft Agents League Hackathon 2026 (Creative Apps Track). A multi-step AI agent that transforms generic CVs into role-specific applications. Paste a CV and job description — get an ATS-optimised summary, tailored cover letter, skill gap analysis, and certification roadmap. Uses Groq Llama 3.1 or Gemini 1.5 Flash, with Microsoft Foundry IQ (Azure AI Search) for grounded retrieval — it only uses what's actually in your CV, no hallucination. Watch the 6 reasoning steps unfold in real time. Tech: HTML, CSS, Vanilla JS. Live on Netlify.";
+    }
+    
+    if (q.includes('notes') || q.includes('protected notes') || q.includes('full-stack')) {
+      return "🔐 **Protected Notes App** — Full-stack notes app with user authentication. Sign up, log in, and create private notes — each user has their own encrypted vault. Tech: Node.js, Express, MySQL, bcrypt for password hashing (never store plain-text passwords!), session management. Demo video available on YouTube. Security is built in from the start, not added at the end.";
+    }
+    
+    if (q.includes('how many projects') || (q.includes('projects') && q.includes('total'))) {
+      return "Snethemba has built **13 live projects**:\n\n🎮 5 games (Retro Racer, The Sunken Coin, Claw Machine, Ember Run, Breakout)\n🚀 6 web applications (Country Explorer, Dessert Generator, Website Hygiene Report, Weather App, World Clock, AI Assistant)\n🤖 1 AI/hackathon project (Job Application Agent — Microsoft Agents League 2026)\n🔐 1 full-stack app (Protected Notes App — Node.js, Express, MySQL, auth)\n🌌 Plus the portfolio site itself, which ties everything together.";
+    }
+    
+    if (q.includes('hackathon') || q.includes('agents league')) {
+      return "🏆 **Microsoft Agents League Hackathon — Creative Apps Track, June 2026.** Snethemba built the Job Application Agent — a multi-step AI agent that runs 6 reasoning steps in real time: Foundry IQ retrieval, extract requirements, score fit, tailor for ATS, generate cover letter, suggest certs. It uses Groq Llama 3.1 and Foundry IQ (Azure AI Search) for grounded retrieval. Built with GitHub Copilot throughout development. The live demo is on Netlify, and the source code is on GitHub.";
     }
     
     if (q.includes('github')) {
@@ -135,11 +147,7 @@ function Chatbot() {
       return "Outside of coding, Snethemba loves trying new dessert recipes (hence the Dessert Generator project!), stargazing, and learning about space. Her portfolio's galactic theme isn't random — she's genuinely fascinated by the cosmos. 🌌";
     }
     
-    if (q.includes('how many') && (q.includes('project') || q.includes('game'))) {
-      return "Snethemba has built 12 total projects: 5 games in the Game Lab (Retro Racer, The Sunken Coin, Claw Machine, Breakout, Ember Run), 6 web applications (Country Explorer, Website Hygiene Report, Weather App, World Clock, Dessert Generator, AI Assistant), and 1 full-stack demo (Protected Notes App with video). All are live or have demos available!";
-    }
-    
-    return "I can tell you about her 5x Azure certifications, technical skills (frontend, backend, game dev, DevOps), all 12 projects (5 games + 6 web apps + 1 full-stack demo), education, soft skills, relocation plans, or contact info. Try asking: 'What Azure certs does she have?', 'Tell me about her games', 'What web apps did she build?', or 'Is she willing to relocate?'";
+    return "I can tell you about her 5x Azure certifications, technical skills (frontend, backend, game dev, DevOps), all 13 live projects (5 games + 6 web apps + 1 AI hackathon + 1 full-stack app), education, soft skills, relocation plans, or contact info. Try asking: 'What Azure certs does she have?', 'Tell me about her games', 'What web apps did she build?', 'What's the Job Application Agent?', or 'Is she willing to relocate?'";
   };
 
   const sendMessage = async () => {
