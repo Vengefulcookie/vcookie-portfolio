@@ -78,7 +78,7 @@ Want to run this portfolio on your own computer? Here's how:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Vengefulcookie/portfolio.git
+git clone https://github.com/Vengefulcookie/vcookie-portfolio.git
 
 # Navigate into the folder
 cd portfolio
