@@ -26,7 +26,7 @@ function App() {
         <div className="hero-content">
           <div className="hero-emoji">🌌</div>
           <h1>Snethemba Shangase</h1>
-          <h2>Junior DevOps Engineer | Software Developer</h2>
+          <h2>DevOps Engineer | Software Developer</h2>
           <div className="cert-badge">
             <span className="azure-badge">☁️ 5x Microsoft Azure Certified</span>
           </div>
