@@ -116,7 +116,7 @@ const projects = [
         url: "https://vcookie-job-application-agent.netlify.app",
         category: "hackathon",
         gradient: "linear-gradient(135deg, #1a3a5a 0%, #0a2a4a 50%, #0a1a3a 100%)"
-},
+}
 ];
 
 export default projects;
